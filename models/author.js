@@ -10,7 +10,7 @@ var AuthorSchema = new Schema({
 });
 
 // Virtual for author's fullname
-AuthorSchema.virtual('name').get(() => {
+AuthorSchema.virtual('name').get(function () {
   if (!this.first_name || !this.family_name) {
     return '';
   }
@@ -19,7 +19,7 @@ AuthorSchema.virtual('name').get(() => {
 });
 
 // Virtual for author's lifespan
-AuthorSchema.virtual('lifespan').get(() => {
+AuthorSchema.virtual('lifespan').get(function () {
   if (!this.date_of_birth) {
     return '';
   }
