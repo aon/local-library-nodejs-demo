@@ -1,11 +1,11 @@
 {
-  "name": "local-library-express-demo",
+  "name": "local-library-nodejs-demo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=local-library-express-demo:* npm run devstart"
+    "serverstart": "DEBUG=local-library-nodejs-demo:* npm run devstart"
   },
   "dependencies": {
     "async": "^3.2.3",
