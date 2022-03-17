@@ -24,14 +24,12 @@ AuthorSchema.virtual('lifespan').get(function () {
     return '';
   }
 
-  var date_of_birth = this.date_of_birth.getYear().toString();
-  var date_of_death = this.date_of_death.getYear().toString();
+  var formatted_date_of_birth = this.date_of_birth.getFullYear().toString();
+  var formatted_date_of_death = this.date_of_death
+    ? this.date_of_death.getFullYear().toString()
+    : '';
 
-  if (this.date_of_death) {
-    return `${date_of_birth} - ${date_of_death}`;
-  } else {
-    return `${date_of_birth} -`;
-  }
+  return `${formatted_date_of_birth} - ${formatted_date_of_death}`;
 });
 
 // Virtual for author's URL
