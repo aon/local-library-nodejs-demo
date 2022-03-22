@@ -118,6 +118,7 @@ exports.book_create_post = [
         req.body.genre = new Array(req.body.genre);
       }
     }
+    next();
   },
 
   // Validate and sanitize fields.
